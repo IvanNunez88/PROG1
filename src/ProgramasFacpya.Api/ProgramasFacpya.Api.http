@@ -1,0 +1,92 @@
+@ProgramasFacpya.Api_HostAddress = http://localhost:5165
+
+### Listar alumnos
+GET {{ProgramasFacpya.Api_HostAddress}}/api/Alumno/ObtenerTodos
+Accept: application/json
+
+### Obtener un alumno
+GET {{ProgramasFacpya.Api_HostAddress}}/api/Alumno/ObtenerPorId/1001
+Accept: application/json
+
+### Alta
+POST {{ProgramasFacpya.Api_HostAddress}}/api/Alumno/Crear
+Content-Type: application/json
+
+{
+  "nombre": "Carlos",
+  "aPaterno": "Ramirez",
+  "aMaterno": "Torres",
+  "idCarrera": 1
+}
+
+### Cambio
+PUT {{ProgramasFacpya.Api_HostAddress}}/api/Alumno/Actualizar/1001
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "aPaterno": "Perez",
+  "aMaterno": "Lopez",
+  "idCarrera": 2
+}
+
+### Baja
+DELETE {{ProgramasFacpya.Api_HostAddress}}/api/Alumno/Eliminar/1001
+
+### Listar maestros
+GET {{ProgramasFacpya.Api_HostAddress}}/api/Maestro/ObtenerTodos
+Accept: application/json
+
+### Obtener un maestro
+GET {{ProgramasFacpya.Api_HostAddress}}/api/Maestro/ObtenerPorId/1000
+Accept: application/json
+
+### Alta maestro
+POST {{ProgramasFacpya.Api_HostAddress}}/api/Maestro/Crear
+Content-Type: application/json
+
+{
+  "nombre": "Laura",
+  "aPaterno": "Garza",
+  "aMaterno": "Martinez"
+}
+
+### Cambio maestro
+PUT {{ProgramasFacpya.Api_HostAddress}}/api/Maestro/Actualizar/1000
+Content-Type: application/json
+
+{
+  "nombre": "Laura Elena",
+  "aPaterno": "Garza",
+  "aMaterno": "Martinez"
+}
+
+### Baja maestro
+DELETE {{ProgramasFacpya.Api_HostAddress}}/api/Maestro/Eliminar/1000
+
+### Listar carreras
+GET {{ProgramasFacpya.Api_HostAddress}}/api/Carrera/ObtenerTodos
+Accept: application/json
+
+### Obtener una carrera
+GET {{ProgramasFacpya.Api_HostAddress}}/api/Carrera/ObtenerPorId/1
+Accept: application/json
+
+### Alta carrera
+POST {{ProgramasFacpya.Api_HostAddress}}/api/Carrera/Crear
+Content-Type: application/json
+
+{
+  "descripcion": "LCE"
+}
+
+### Cambio carrera
+PUT {{ProgramasFacpya.Api_HostAddress}}/api/Carrera/Actualizar/5
+Content-Type: application/json
+
+{
+  "descripcion": "LCEI"
+}
+
+### Baja carrera
+DELETE {{ProgramasFacpya.Api_HostAddress}}/api/Carrera/Eliminar/5
